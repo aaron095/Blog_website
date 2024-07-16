@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<body class="home">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+    <div class="blogHome">
+        <h1 class="aleo-h1">Start blogging about your travels!</h1>
+
+        <form action="/submit" method="POST" class="blogForm">
+            <textarea name="text" class="feedback-input" rows="4" cols="50" placeholder="Type Blog"></textarea>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+            <input type="submit" value="POST"/>
+        </form>
+    </div>
+
+   
+</body>
+    
+
+
+
+<%- include("partials/footer.ejs") %>

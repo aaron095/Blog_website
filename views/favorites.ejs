@@ -1,0 +1,50 @@
+<%- include("partials/header.ejs") %>
+
+<body class="blog">
+  
+  <nav class="navbar navbar-blog">
+    <div class="container-fluid">
+        <a class="nav-link" href="/blog">All posts</a>
+        <a class="nav-link" href="/favorites">Favorites</a>
+        <a class="nav-link" href="/other-travels">Other travels</a>
+      <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+<h1 class="aleo-h1">
+  <% if (locals.header) { %>
+    <%= header %>
+    <% } else { %>
+    No Favorites
+    <% } %>
+</h1>
+
+  <% if (locals.blogPosts && locals.imagePosts) { %>
+    <% for (let i = 0; i < locals.blogPosts.length; i++) { %>
+      <div class="center">
+        <div name="text" class="editBox roboto-regular" >
+          <img src="images/<%= locals.imagePosts[i] %>" class="blogImages">
+          <%= locals.blogPosts[i] %>
+          <form action="/edit" method="PUT">
+              <input type="hidden"  name="postID" value="<%= i %>">
+              <input type="submit" value="Edit">
+          </form>
+        </div>
+      </div>
+        
+        
+        <% } %>
+<% } %>
+ 
+
+
+</body>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

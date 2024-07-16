@@ -1,0 +1,254 @@
+main {
+    text-align: center;
+    padding: 5vmin;
+    flex: 1 0 auto;
+}
+
+.navbar-collaspe {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #E9D59C;
+    min-height: 110px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+
+html,
+body {
+    height: 100%;
+    
+}
+
+.navbar-custom {
+    background-color: #E9D59C;
+}
+
+.navbar-blog {
+    background-color: #64BBB1;
+}
+
+.editBox {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    background-color: #7FCDCD;
+    box-shadow: 5px 10px 18px #7FCDCD;
+    
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aleo-h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.home {
+    background-image: url(https://mrwallpaper.com/images/hd/europe-s-verona-city-in-italy-cbaucl6ueo5tkgy3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.blogHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.blogForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+body.blog {
+    background-image: url(https://wallpapercave.com/wp/wp2841021.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.blogImages {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .editBox {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width: 600px){
+    .editBox {
+        width: 50%;
+    }
+}
+
+.deleteBlog {
+    background-image: url(https://wallpaperswide.com/download/travel_the_world_hot_air_balloons-wallpaper-3840x2160.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.save {
+    margin-bottom: 10px;
+    
+}
+
+[type="submit"] {
+    background-color: #6E9D6c;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+[type="submit"]:hover {
+    background-color: white;
+}
+
+
+/* this will be css for the gallery page below */
+
+.galleryBody {
+    background-image: url(https://wallpaperswide.com/download/travel_the_world_hot_air_balloons-wallpaper-3840x2160.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.galleryTitle {
+    font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* animation for planes */
+footer .airplane {
+    position: absolute;
+    
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../images/airplane.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+}
+
+footer .airplane#airplane1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: airplane1 8s linear infinite;
+}
+
+
+footer .train {
+    position: absolute;
+    
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("../images/train.png");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+}
+
+footer .train#train1 {
+    
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: train1 8s linear infinite;
+}
+
+@keyframes airplane1 {
+    0% {
+        background-position-y: -10px ;
+      background-position-x: 0px;
+    }
+    
+    100% {
+        background-position-y: -10px ;
+      background-position-x: calc(100vw - var(--plane-width, 100px));
+    }
+  }
+
+  @keyframes train1 {
+    0% {
+        background-position-y: 55px;
+        background-position-x: calc(100vw - var(--plane-width, 100px));
+    }
+    
+    100% {
+        background-position-y: 55px;
+        background-position-x: 0px;
+    }
+  }
+
+  /* other travels page */
+
+  .other {
+    background-image: url(https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?cs=srgb&dl=pexels-fabianwiktor-994605.jpg&fm=jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  

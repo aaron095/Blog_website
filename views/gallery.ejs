@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<body class="galleryBody">
+
+    <h1 class="galleryTitle">Gallery</h1>
+
+    <% if (locals.imagePosts) { %>
+        <% for (let i = 0; i < locals.imagePosts.length; i++) { %>
+          <div class="center">
+            <div name="text" class="editBox">
+              <img src="images/<%= locals.imagePosts[i] %>" class="blogImages">
+            </div>
+          </div>
+        <% } %>
+    <% }  %>
+
+</body>
+
+<%- include("partials/footer.ejs") %>
